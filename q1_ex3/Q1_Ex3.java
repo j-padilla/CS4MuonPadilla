@@ -8,13 +8,17 @@ package q1_ex3;
  *
  * @author babyj
  */
+import java.util.Scanner;
 public class Q1_Ex3 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        
+        Singer miku = new Singer("Miku");
+        miku.performance();
     }
     
 }
