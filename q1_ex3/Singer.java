@@ -10,27 +10,32 @@ package q1_ex3;
  */
 public class Singer {
     String name, favoriteSong;
-    int noOfPerformances, audience;
+    int noOfPerformances, fans;
     double earnings;
-    boolean performForAudience;
+    boolean perform = false;
+    String concert = "";
     
     public Singer(String n) {
         this.name = n;
         favoriteSong = "";
         noOfPerformances = 0;
         earnings = 0;
-        performForAudience = false;
-        audience = 0;
+        fans = 12;
     }
     
-    public void performForAudience() {
-        if(performForAudience == true) {
-            noOfPerformances =+ 1;
-            earnings = audience * 100;
+    public void performance() {
+        Scanner sc = new Scanner(System.in);
+        do {
+            System.out.println("Will the singer have a concert? [y/n]");
+            concert = sc.nextLine();
+            if(concert.equalsIgnoreCase("y")) {
+               noOfPerformances =+ 1;
+               earnings = 100 * fans;
+               System.out.printf("12 people attended this concert. \nCurrent Earnings: %d \nCurrent Number of Performances: %d", earnings, noOfPerformances);
+            }
+            else {
+                break;
+            }
         }
-    }
-    
-    public void changeFavSong(String n) {
-        this.favoriteSong = n;
-    }
+        while(perform == true);
 }
