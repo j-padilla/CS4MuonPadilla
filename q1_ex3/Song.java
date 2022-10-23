@@ -9,7 +9,7 @@ package q1_ex3;
  * @author babyj
  */
 public class Song {
-    private String title, album;
+    private String title;
     private int songNo, popularityFaved, timesPlayed;
     
     public Song(String title) {
@@ -20,7 +20,6 @@ public class Song {
     
     public Song(String title, String album, int songNo) {
         this.title = title;
-        this.album = album;
         this.songNo = songNo;
         this.timesPlayed = 0;
         this.popularityFaved = 0;
@@ -28,10 +27,6 @@ public class Song {
     
     public String getTitle() {
         return title;
-    }
-
-    public String getAlbum() {
-        return album;
     }
 
     public int getSongNo() {
