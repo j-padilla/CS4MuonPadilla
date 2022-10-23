@@ -15,10 +15,17 @@ public class Q1_Ex3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Song s1 = new Song("Paradise");
+        Song s2 = new Song("Easy"); 
+        Song s3 = new Song("FOOLS");
+        Song s4 = new Song("LIFE");
         
-        Singer miku = new Singer("Miku");
-        miku.performance();
+        Singer ra = new Singer("Rude-a");
+        Singer ts = new Singer("Troye Sivan", s2);
+        
+        ra.performForAudience(12);
+        ra.setFavoriteSong(s4);
+        
+        System.out.println(ra.getFavoriteSong().getTitle());
     }
-    
 }
