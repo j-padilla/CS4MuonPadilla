@@ -9,33 +9,48 @@ package q1_ex3;
  * @author babyj
  */
 public class Singer {
-    String name, favoriteSong;
-    int noOfPerformances, fans;
-    double earnings;
-    boolean perform = false;
-    String concert = "";
-    
-    public Singer(String n) {
-        this.name = n;
-        favoriteSong = "";
-        noOfPerformances = 0;
-        earnings = 0;
-        fans = 12;
+    private String name;
+    private int noOfPerformances;
+    private double earnings;
+    private Song favoriteSong;
+
+    public Singer(String name) {
+        this.name = name;
+        this.noOfPerformances = 0;
+        this.earnings = 0;
+        this.favoriteSong = null; 
+    }
+        
+    public Singer(String name, Song favoriteSong) {
+        this.name = name;
+        this.noOfPerformances = 0;
+        this.earnings = 0;
+        this.favoriteSong = favoriteSong;    
     }
     
-    public void performance() {
-        Scanner sc = new Scanner(System.in);
-        do {
-            System.out.println("Will the singer have a concert? [y/n]");
-            concert = sc.nextLine();
-            if(concert.equalsIgnoreCase("y")) {
-               noOfPerformances =+ 1;
-               earnings = 100 * fans;
-               System.out.printf("12 people attended this concert. \nCurrent Earnings: %d \nCurrent Number of Performances: %d", earnings, noOfPerformances);
-            }
-            else {
-                break;
-            }
-        }
-        while(perform == true);
+    public String getName() {
+        return name;
+    }
+
+    public int getNoOfPerformances() {
+        return noOfPerformances;
+    }
+
+    public double getEarnings() {
+        return earnings;
+    }
+
+    public Song getFavoriteSong() {
+        return favoriteSong;
+    }
+
+    public void setFavoriteSong(Song favoriteSong) {
+        this.favoriteSong = favoriteSong;
+    }
+    
+    public void performForAudience(int fans) {
+        noOfPerformances++;
+        earnings =+ fans*100;
+        System.out.printf("The artist %s performed for an audience of %d people, increasing their net worth to %.2f.%n", name, fans, earnings);
+    }
 }
