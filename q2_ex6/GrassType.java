@@ -13,4 +13,9 @@ public class GrassType {
         super(n, "grass", "water", "fire", m, base);
         this.guard = true;
     }
+    
+    public void special(Monster m){
+        System.out.println(name + " did a pose.");        
+        this.hp += hp * 0.2;
+    } 
 }
