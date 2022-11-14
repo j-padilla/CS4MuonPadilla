@@ -15,6 +15,9 @@ public class Q2_Ex6 {
      */
     public static void main(String[] args) {
         
-    }
-    
+        FireType tepig = new FireType("Tepig", 65, 63);
+        GrassType snivy = new GrassType("Snivy", 45, 45);
+        WaterType oshawott = new WaterType("Oshaowtt", 55, 55);
+  
+    }        
 }
