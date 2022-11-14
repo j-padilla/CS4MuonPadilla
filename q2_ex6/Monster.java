@@ -11,11 +11,15 @@ package q2_ex6;
 import java.util.ArrayList;
 
 public class Monster {
-    private final String name, type, strongAgainst, weakAgainst;
-    private int maxHP, hp, atk, def, xp, lvl;
+
+    final String name;
+    final String type, strongAgainst, weakAgainst;
+    int maxHP;
+    int hp;
+    private int atk, def, xp, lvl;
     boolean guard;
     boolean charge;
-    private static ArrayList<Monster> monsterList = new ArrayList<>();
+    static ArrayList<Monster> monsterList = new ArrayList<>();
 
     public Monster(String n, String t, String s, String w, int m, int base){
         name = n;
