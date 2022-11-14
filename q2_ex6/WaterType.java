@@ -8,8 +8,13 @@ package q2_ex6;
  *
  * @author babyj
  */
-public class WaterType {
-    public WaterType(String n, String t, String s, String w, int m, int base) {
+public class WaterType extends Monster {
+    public WaterType(String n, int m, int base) {
         super(n, "water", "fire", "grass", m, base);
     }
+    
+    public void special(Monster m){
+        System.out.println(name + " did a pose.");        
+        this.hp += hp * 0.2;
+    } 
 }
