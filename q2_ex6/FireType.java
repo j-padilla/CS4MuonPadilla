@@ -8,9 +8,14 @@ package q2_ex6;
  *
  * @author babyj
  */
-public class FireType {
-    public FireType(String n, String t, String s, String w, int m, int base) {
+public class FireType extends Monster {
+    public FireType(String n, int m, int base) {
         super(n, "fire", "grass", "water", m, base);
         this.charge = true;
     }
+    
+    public void special(Monster m){
+        System.out.println(name + " did a pose.");        
+        this.hp += hp * 0.2;
+    } 
 }
