@@ -8,9 +8,10 @@ package q2_ex6;
  *
  * @author babyj
  */
-public class GrassType {
-    public GrassType(String n, String t, String s, String w, int m, int base) {
+public class GrassType extends Monster{
+    public GrassType(String n, int m, int base) {
         super(n, "grass", "water", "fire", m, base);
+        this.hp = maxHP;
         this.guard = true;
     }
     
@@ -18,4 +19,8 @@ public class GrassType {
         System.out.println(name + " did a pose.");        
         this.hp += hp * 0.2;
     } 
+    
+    public void setHP(int m){
+        this.maxHP = m;
+    }
 }
